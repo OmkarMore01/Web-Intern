@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-light">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">EduManage</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="AddStudent.html">Add Student</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Add Material</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Material Data</a></li>
+            </ul>
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HEADER / HERO ================= -->
+<section class="bg-white text-center py-5 shadow-sm">
+    <div class="container">
+        <h1 class="fw-bold text-primary">Student & Study Material Management System</h1>
+        <p class="text-muted mt-3">
+            A simple and efficient platform to manage students, courses, and study materials digitally.
+        </p>
+        <a href="AddStudent.html" class="btn btn-primary btn-lg mt-3">Get Started</a>
+    </div>
+</section>
+
+<!-- ================= CAROUSEL ================= -->
+<div id="carouselExampleAutoplaying" class="carousel slide mt-5" data-bs-ride="carousel" style="width: 85%; margin: auto;">
+    <div class="carousel-inner rounded shadow">
+        <div class="carousel-item active">
+            <img src="i1.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="i2.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="i3.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h3 class="text-primary fw-bold">About This Project</h3>
+            <p class="text-muted">
+                This system helps colleges manage student records and study materials
+                efficiently. It reduces paperwork and provides quick access to learning
+                resources.
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+                 width="200" alt="Students">
+        </div>
+    </div>
+</section>
+
+<!-- ================= FEATURES SECTION ================= -->
+<section class="container mt-5">
+    <h3 class="text-center text-primary fw-bold mb-4">Key Features</h3>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm text-center h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Student Management</h5>
+                    <p class="card-text text-muted">
+                        Add, update and manage student information easily.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm text-center h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Study Materials</h5>
+                    <p class="card-text text-muted">
+                        Upload and access study materials anytime.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm text-center h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Easy Search</h5>
+                    <p class="card-text text-muted">
+                        Quickly search students or materials.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= QUICK ACTIONS ================= -->
+<section class="container mt-5 mb-5">
+    <h3 class="text-center text-primary fw-bold mb-4">Quick Actions</h3>
+
+    <div class="d-flex justify-content-center gap-3">
+        <a href="AddStudent.html" class="btn btn-success btn-lg">Add Student</a>
+        <a href="#" class="btn btn-warning btn-lg">Add Material</a>
+        <a href="#" class="btn btn-info btn-lg text-white">View Materials</a>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0">© 2025 Student Management System | Developed for College Project</p>
+</footer>
+
+</body>
+</html>
