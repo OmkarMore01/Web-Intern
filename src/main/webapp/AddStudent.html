@@ -6,11 +6,48 @@
     <title>Intersport Event Registration</title>
 
     <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body class="bg-light">
 
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">EduManage</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"> Student Intersport Registration</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Add Material </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Material Data</a>
+                </li>
+            </ul>
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= FORM ================= -->
 <div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -21,148 +58,65 @@
                 </div>
 
                 <div class="card-body">
+                    <form method="post" action="StudentRegister">
 
-                    <form>
-                        <!-- Student Details -->
-                        <h5 class="text-primary mb-3">Student Details</h5>
+    <!-- Student Details -->
+    <h5 class="text-primary mb-3">Student Details</h5>
 
-                        <div class="mb-3">
-                            <label class="form-label">Student Name</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+    <div class="mb-3">
+        <label class="form-label">Student Name</label>
+        <input type="text" name="sname" class="form-control" required>
+    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Enrollment / Student ID</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+    <div class="mb-3">
+        <label class="form-label">Enrollment / Student ID</label>
+        <input type="number" name="sid" class="form-control" required>
+    </div>
 
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Course Name</label>
-                                <input type="text" class="form-control" required>
-                            </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Course Name</label>
+            <input type="text" name="course" class="form-control" required>
+        </div>
 
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Study Year</label>
-                                <select class="form-select" required>
-                                    <option value="">Select Year</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">College Name</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-
-                        <!-- Sport Details -->
-                        <h5 class="text-primary mt-4 mb-3">Sport Details</h5>
-
-                        <div class="mb-3">
-                            <label class="form-label">Sport Name</label>
-                            <select class="form-select" required>
-                                <option value="">Select Sport</option>
-                                <option>Cricket</option>
-                                <option>Football</option>
-                                <option>Basketball</option>
-                                <option>Volleyball</option>
-                                <option>Badminton</option>
-                                <option>Athletics</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Participation Type</label><br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="type" required>
-                                <label class="form-check-label">Individual</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="type">
-                                <label class="form-check-label">Team</label>
-                            </div>
-                        </div>
-
-                        <!-- Personal & Contact -->
-                        <h5 class="text-primary mt-4 mb-3">Personal & Contact Details</h5>
-
-                        <div class="mb-3">
-                            <label class="form-label">Gender</label><br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" required>
-                                <label class="form-check-label">Male</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender">
-                                <label class="form-check-label">Female</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender">
-                                <label class="form-check-label">Other</label>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Date of Birth</label>
-                            <input type="date" class="form-control" required>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Mobile Number</label>
-                                <input type="tel" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Emergency Contact</label>
-                            <input type="tel" class="form-control" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">T-Shirt Size</label>
-                            <select class="form-select" required>
-                                <option value="">Select Size</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                                <option>XL</option>
-                            </select>
-                        </div>
-
-                        <div class="form-check mb-4">
-                            <input class="form-check-input" type="checkbox" required>
-                            <label class="form-check-label">
-                                I confirm that the above details are correct.
-                            </label>
-                        </div>
-
-                        <!-- Buttons -->
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg">Register</button>
-                            <button type="reset" class="btn btn-outline-secondary">Clear</button>
-                        </div>
-
-                    </form>
-
-                </div>
-
-                <div class="card-footer text-center text-muted">
-                    © College Intersport Committee
-                </div>
-            </div>
-
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Study Year</label>
+            <select name="year" class="form-select" required>
+                <option value="">Select Year</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
         </div>
     </div>
-</div>
 
-</body>
-</html>
+    <div class="mb-3">
+        <label class="form-label">College Name</label>
+        <input type="text" name="college" class="form-control" required>
+    </div>
+
+    <!-- Sport Details -->
+    <h5 class="text-primary mt-4 mb-3">Sport Details</h5>
+
+    <div class="mb-3">
+        <label class="form-label">Sport Name</label>
+        <select class="form-select" name="sport" required>
+            <option value="">Select Sport</option>
+            <option>Cricket</option>
+            <option>Football</option>
+            <option>Basketball</option>
+            <option>Volleyball</option>
+            <option>Badminton</option>
+            <option>Athletics</option>
+        </select>
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-grid gap-2 mt-4">
+        <button type="submit" class="btn btn-success btn-lg">Register</button>
+        <button type="reset" class="btn btn-danger btn-lg">Cancel</button>
+    </div>
+
+</form>
+
