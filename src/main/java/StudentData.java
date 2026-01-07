@@ -52,11 +52,17 @@ public class StudentData extends HttpServlet {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="StudentData">Registered Students</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="AddStudent.html">Add Student</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Add Material</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Material Data</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="StudentData">Registered Students</a></li>
+                            
+                            <li class="nav-item"><a class="nav-link" href="AddMaterial.html">Add Material</a></li>
+                            <li class="nav-item"><a class="nav-link" href="MaterialData">Material Data</a></li>
+                             
+             <li class="nav-item">
+                    <a class="nav-link" href="IssueMaterial.html">Issue Material</a>
+                </li>
+            
                         </ul>
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search Students">

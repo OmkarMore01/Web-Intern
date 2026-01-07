@@ -46,12 +46,7 @@ public class LoginCheck extends HttpServlet {
     		            out.println("alert('Login Successful');");
     		            out.println("window.location.href='Home.html';");
     		            out.println("</script>");
-    		        } else {
-    		            out.println("<script>");
-    		            out.println("alert('Login Failed User is not registered');");
-    		            out.println("window.location.href='Login.html';");
-    		            out.println("</script>");
-    		        }
+    		        } 
     		}
     		
     		
