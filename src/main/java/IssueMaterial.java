@@ -23,7 +23,7 @@ public class IssueMaterial extends HttpServlet {
         String materialType = request.getParameter("material_type");
         String materialName = request.getParameter("material_name");
         int quantity = Integer.parseInt(request.getParameter("quantity"));
-
+        LocalDate issueDate = LocalDate.now();
         LocalDate returnDate = LocalDate.now().plusDays(7);
 
         try {
@@ -59,18 +59,19 @@ public class IssueMaterial extends HttpServlet {
 
             // Insert issued material record
             String insertQuery = "INSERT INTO issued_materials "
-                    + "(student_id, student_name, material_id, material_type, material_name, quantity, return_date) "
-                    + "VALUES (?, ?, ?, ?, ?, ?, ?)";
-            PreparedStatement insertStmt = con.prepareStatement(insertQuery);
-            insertStmt.setInt(1, studentId);
-            insertStmt.setString(2, studentName);
-            insertStmt.setInt(3, materialId);
-            insertStmt.setString(4, materialType);
-            insertStmt.setString(5, materialName);
-            insertStmt.setInt(6, quantity);
-            insertStmt.setDate(7, Date.valueOf(returnDate));
-            insertStmt.executeUpdate();
+            	    + "(student_id, student_name, material_id, material_type, material_name, quantity, issue_date, return_date) "
+            	    + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
+PreparedStatement insertStmt = con.prepareStatement(insertQuery);
+insertStmt.setInt(1, studentId);
+insertStmt.setString(2, studentName);
+insertStmt.setInt(3, materialId);
+insertStmt.setString(4, materialType);
+insertStmt.setString(5, materialName);
+insertStmt.setInt(6, quantity);
+insertStmt.setDate(7, Date.valueOf(issueDate));     
+insertStmt.setDate(8, Date.valueOf(returnDate));    
+insertStmt.executeUpdate();
             // Update available quantity
             String updateQuery = "UPDATE materials SET available_quantity = available_quantity - ? WHERE material_id = ?";
             PreparedStatement updateStmt = con.prepareStatement(updateQuery);
